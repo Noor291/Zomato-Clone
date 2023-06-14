@@ -80,8 +80,8 @@ Router.get("/c/:category", async (req, res) => {
   });
   
   // /c/non
-  non === non - veg;
-  non === nonsdfwae; 
+//   non === non - veg;
+//   non === nonsdfwae; 
 
 
 export default Router
