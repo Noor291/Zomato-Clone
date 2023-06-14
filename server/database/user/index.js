@@ -28,8 +28,8 @@ UserSchema.statics.findByEmailAndPhone = async ({email,phoneNumber}) => { //cant
   return false;
 };
 
-UserSchema.statics.findByEmailAndPassword = async (email,password) => {
-  const user = await UserModel.findOne({ email }); // password encrypted 
+UserSchema.statics.findByEmailAndPassword = async ({email,password}) => {
+  const user = await UserModel.findOne( { email }); // password encrypted 
   if (!user) throw new Error("User does not exist !!!");
 
   // Compare Password
