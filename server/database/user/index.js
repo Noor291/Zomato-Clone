@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema({
 })
 // attachments
 UserSchema.methods.generateJwtToken = function () {
-    return jwt.sign({user:this._id.toString()},"ZomatoAbc"); //ZomatoAbc is key..
+    return jwt.sign({user:this._id.toString()},process.env.JWT_SECRET); //ZomatoAbc is key..
 };
 
 // helper functions

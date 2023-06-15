@@ -13,8 +13,8 @@ const OrderSchema = new mongoose.Schema({
       status:{type:String,default:"Placed"},
       paymentDetails:{
         itemTotal:{ type:Number,required:true},
-        promo:{type:Number,required:false},
-        tax:{type:Number,required:true },
+        promo:{type:String,required:false},
+        tax:{type:String,required:true },
         razorpay_payment_id:{type:String,required:true}
       }
     }
