@@ -1,10 +1,14 @@
+//rendering routes
 import './App.css';
+import { Routes, Route, Navigate} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      This is Zomato Clone
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Navigate to="/delivery" />}/>
+      </Routes>
+    </>
   );
 }
 
