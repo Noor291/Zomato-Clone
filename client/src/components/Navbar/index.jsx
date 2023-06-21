@@ -61,7 +61,7 @@ const MobileNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
 const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
   return (
     <div className="w-full items-center justify-between hidden lg:flex px-14">
-      <div className="gap-4  items-center justify-around flex">
+      <div className="gap-4  items-right justify-right flex">
         <div className="w-20">
           <img
             src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
