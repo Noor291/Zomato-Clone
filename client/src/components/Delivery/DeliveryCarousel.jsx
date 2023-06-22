@@ -36,8 +36,14 @@ const DeliveryCarousel = () => {
   
     {
       image:
-        "https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png",
-      title: "Biryani",
+        "https://b.zmtcdn.com/data/o2_assets/bc0cc8557a06fcd3aacdd7b241cf9db71632716547.png",
+      title: "Samosa",
+      time:""
+    },
+    {
+      image:
+        "https://b.zmtcdn.com/data/dish_images/83b1a4086e98dc584a7ce5d9a844a3191635166040.png",
+      title: "Pastry",
       time:""
     },
     {
@@ -46,13 +52,7 @@ const DeliveryCarousel = () => {
       title: "Rolls",
       time:""
     },
-    {
-        image:
-          "https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png",
-        title: "Dosa",
-        time:""
-      },
-      {
+     {
         image:
           "https://b.zmtcdn.com/data/dish_images/e44c42ff4b60b025225c8691ef9735b11635781903.png",
         title: "Paneer",
@@ -89,6 +89,12 @@ const DeliveryCarousel = () => {
         title: "Sandwich",
         time:""
       },
+      {
+        image:
+          "https://b.zmtcdn.com/data/dish_images/c953e5ca07150e9a51f8b21102e20f7e1634805157.png",
+        title: "Chole Bhature",
+        time:""
+      },
   ];
 
   const brands=[
@@ -106,7 +112,7 @@ const DeliveryCarousel = () => {
       },
       {
         image:
-          "https://b.zmtcdn.com/data/brand_creatives/logos/5caf38856d23347b351bb7abf97134d3_1583218286.png?output-format=webp",
+          "https://b.zmtcdn.com/data/brand_creatives/logos/9125a7319317e9fa213f8832705047ac_1602230690.png",
         title: "Domino's Pizza",
         time:"40 min"
       },
@@ -122,7 +128,18 @@ const DeliveryCarousel = () => {
         title: "Cafe Coffee Day",
         time:"20 min"
       },
-
+      {
+        image:
+          "https://b.zmtcdn.com/data/brand_creatives/logos/9742d760cf95e9dbf9b869ca9c753f8f_1613213827.png?output-format=webp",
+        title: "Pizza Hut",
+        time:"35 min"
+      },
+      {
+        image:
+          "https://b.zmtcdn.com/data/brand_creatives/logos/44c01f29b7ac24f90a8088a2837823d6_1670387959.png",
+        title: "Boston & Co.",
+        time:"24 min"
+      },
   ]
 
   const slideConfig = {
@@ -157,15 +174,15 @@ const DeliveryCarousel = () => {
         Inspiration for your first order
       </h1>
       <div className="lg:hidden grid grid-cols-3 md:grid-cols-4 gap-3 justify-center">
-        {categories.map((food) => (
-          <DeliveryCategoryCard {...food} />
+        {categories.map((food,index) => (
+          <DeliveryCategoryCard {...food} key={index} />
         ))}
       </div>
       <div className="hidden lg:block">
         <Swiper {...slideConfig}>
-          {categories.map((food) => (
+          {categories.map((food ,index) => (
             <SwiperSlide>
-              <DeliveryCategoryCard {...food} />
+              <DeliveryCategoryCard {...food} key ={index}/>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -178,15 +195,15 @@ const DeliveryCarousel = () => {
         Top brands for you
       </h1>
       <div className="lg:hidden grid grid-cols-3 md:grid-cols-4 gap-3 justify-center">
-        {brands.map((food) => (
-          <DeliveryCategoryCard {...food} />
+        {brands.map((food,index) => (
+          <DeliveryCategoryCard {...food} key={index} />
         ))}
       </div>
       <div className="hidden lg:block">
         <Swiper {...slideConfig}>
-          {brands.map((food) => (
+          {brands.map((food, index) => (
             <SwiperSlide>
-              <DeliveryCategoryCard {...food} />
+              <DeliveryCategoryCard {...food} key={index} />
             </SwiperSlide>
           ))}
         </Swiper>

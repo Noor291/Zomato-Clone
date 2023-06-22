@@ -28,7 +28,7 @@ const DeliveryLgCard = ({ image, title,time }) => {
       <div className="hidden lg:block rounded-full w-full">
         <div className="w-full h-26 rounded-full border-slate-700">
           <img
-            className=" w-full h-full object-center rounded-full shadow-lg "
+            className=" w-full h-full object-center rounded-full drop-shadow-lg "
             src={image}
             alt={title}
           />
