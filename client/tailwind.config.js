@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
+        ...colors,
         zomato: {
           50: "#ffe5e7",
           100: "#fab5b9",
