@@ -70,7 +70,7 @@ const LargeTabs = () => {
       imageActive:
         "https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png",
       name: "Delivery",
-      activeColor: "bg-amber-100",
+      activeColor: "bg-zomato-1000",
     },
     {
       id: "dining",
