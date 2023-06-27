@@ -36,11 +36,11 @@ const Checkout = () => {
   const address = [
     {
       name: "Home",
-      address: "Palama Street, 123 Main",
+      address: "V.P.O.- Jaja, Tehsil-Dasuya, Hoshiarpur 144212",
     },
     {
       name: "Work",
-      address: "123 Main Street, CP",
+      address: "Thapar University, Patiala",
     },
   ];
 
