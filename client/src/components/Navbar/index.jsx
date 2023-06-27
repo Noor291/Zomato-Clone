@@ -4,7 +4,27 @@ import { HiLocationMarker } from "react-icons/hi";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { RiSearch2Line } from "react-icons/ri";
 
-const MobileNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
+// components
+import SignUp from "../Auth/Signup";
+import SignIn from "../Auth/Signin";
+
+const MobileNav = ({
+  user,
+  isDropdownOpen,
+  setIsDropdownOpen,
+  signIn,
+  signUp,
+}) => {
+  const SignIn = () => {
+    signIn();
+    setIsDropdownOpen(false);
+  };
+
+  const SignUp = () => {
+    signUp();
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="flex w-full items-center justify-between lg:hidden">
       <div className="w-28">
@@ -47,8 +67,8 @@ const MobileNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
 
             {isDropdownOpen && (
               <div className="absolute shadow-lg py-3 -bottom-24 w-full z-20 flex flex-col gap-2 bg-white border border-gray-200">
-                <button>Sign In</button>
-                <button>Sign Up</button>
+                <button onClick={SignIn}>Sign In</button>
+                <button onClick={SignUp}>Sign Up</button>
               </div>
             )}
           </>
@@ -58,10 +78,26 @@ const MobileNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
   );
 };
 
-const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
+const LargeNav = ({
+  user,
+  isDropdownOpen,
+  setIsDropdownOpen,
+  signIn,
+  signUp,
+}) => {
+  const SignIn = () => {
+    signIn();
+    setIsDropdownOpen(false);
+  };
+
+  const SignUp = () => {
+    signUp();
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="w-full items-center justify-between hidden lg:flex px-14">
-      <div className="gap-4  items-right justify-right flex">
+      <div className="gap-4  items-center justify-around flex">
         <div className="w-20">
           <img
             src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
@@ -77,7 +113,7 @@ const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
           </span>
           <input
             type="text"
-            placeholder="Patiala"
+            placeholder="Delhi NCR"
             className="w-full focus:outline-none"
           />
           <IoMdArrowDropdown />
@@ -97,7 +133,7 @@ const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
           <>
             <div
               onClick={() => setIsDropdownOpen((prev) => !prev)}
-              className="border border-gray-300 text-zomato-400 w-10 h-10 rounded-full"
+              className="border border-gray-300 text-zomato-400 w-9 h-9 rounded-full"
             >
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa-laFwXdJou95MLKfq2p9_LuDEYOG9f4Cog&usqp=CA"
@@ -122,8 +158,8 @@ const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
 
             {isDropdownOpen && (
               <div className="absolute shadow-lg py-3 -bottom-24 -right-0 w-36 z-20 flex flex-col gap-2 bg-white border border-gray-200">
-                <button>Sign In</button>
-                <button>Sign Up</button>
+                <button onClick={SignIn}>Sign In</button>
+                <button onClick={SignUp}>Sign Up</button>
               </div>
             )}
           </>
@@ -134,25 +170,38 @@ const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen }) => {
 };
 
 const Navbar = () => {
+  const [openSignIn, setOpenSignIn] = useState(false);
+  const [openSignUp, setOpenSignUp] = useState(false);
+
+  const openSignInModal = () => setOpenSignIn(true);
+  const openSignUpModal = () => setOpenSignUp(true);
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const user = {
-    fullName: "Aditya",
+    // fullName: "Aditya",
   };
 
   return (
     <>
+      <SignIn isOpen={openSignIn} setIsOpen={setOpenSignIn} />
+      <SignUp isOpen={openSignUp} setIsOpen={setOpenSignUp} />
+
       <nav className="p-4 lg:py-2 flex bg-white shadow-md lg:shadow-none lg:border-b-2 border-gray-100 w-full items-center">
         <MobileNav
           user={user}
           setIsDropdownOpen={setIsDropdownOpen}
           isDropdownOpen={isDropdownOpen}
+          signIn={openSignInModal}
+          signUp={openSignUpModal}
         />
 
         <LargeNav
           user={user}
           setIsDropdownOpen={setIsDropdownOpen}
           isDropdownOpen={isDropdownOpen}
+          signIn={openSignInModal}
+          signUp={openSignUpModal}
         />
       </nav>
     </>

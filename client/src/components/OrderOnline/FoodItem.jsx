@@ -24,7 +24,7 @@ const FoodItem = (props) => {
                 <h3 className="text-xl font-semibold">{props?.name}</h3>
               </div>
               <ReactStars
-                classNames={"block md:hidden"}
+                // classNames={"block md:hidden"}
                 count={5}
                 value={props?.rating}
                 edit={false}
