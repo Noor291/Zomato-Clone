@@ -46,7 +46,7 @@ const Checkout = () => {
 
   const payNow = () => {
     let options = {
-      key: "rzp_test_q1aD8S4CGOEb75",
+      key: "rzp_test_HELtaRGyreHYCF",
       amount:
         cart.reduce((total, current) => total + current.totalPrice, 0) * 100,
       currency: "INR",
@@ -57,7 +57,7 @@ const Checkout = () => {
         console.log(data);
       },
       prefill: {
-        name: "Aditya",
+        name: "Noor",
         email: "text@email.com",
       },
       theme: {
