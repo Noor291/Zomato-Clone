@@ -61,7 +61,7 @@ const MobileNav = ({
               className="border border-gray-300 text-zomato-400 w-9 h-9 rounded-full"
             >
               <img
-                src="https://cdn3.vectorstock.com/i/1000x1000/00/92/teen-boy-character-avatar-vector-11360092.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa-laFwXdJou95MLKfq2p9_LuDEYOG9f4Cog&usqp=CA"
                 alt="avatar"
                 className="w-full h-full rounded-full object-cover"
               />
@@ -162,7 +162,7 @@ const LargeNav = ({
               className="border border-gray-300 text-zomato-400 w-9 h-9 rounded-full"
             >
               <img
-                src="https://cdn3.vectorstock.com/i/1000x1000/00/92/teen-boy-character-avatar-vector-11360092.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa-laFwXdJou95MLKfq2p9_LuDEYOG9f4Cog&usqp=CA"
                 alt="avatar"
                 className="w-full h-full rounded-full object-cover"
               />
