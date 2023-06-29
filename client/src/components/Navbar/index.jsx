@@ -127,7 +127,7 @@ const LargeNav = ({
         <div className="w-20">
           <img
             src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
-            alt="logo"
+            alt="logo "
             className="w-full h-full"
           />
         </div>
