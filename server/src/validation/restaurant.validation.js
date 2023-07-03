@@ -14,4 +14,4 @@ export const ValidateSearchString = (restaurantObject) => {
   });
 
   return Schema.validateAsync(restaurantObject);
-}
+};
